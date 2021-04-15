@@ -56,7 +56,53 @@ public class ptb2Controller implements ActionListener {
     }
    
  
+   private boolean checkA() {
+       boolean isValid = false;
+       try {
+           if (!"".equals(view.getTextFieldX().getText())) {
+               x = Float.parseFloat(view.getTextFieldX().getText());
+               isValid = true;
+           } else {
+               JOptionPane.showMessageDialog(view, "Hằng số x không được trống.");
+           }
+       } catch (NumberFormatException ex) {
+            ex.printStackTrace();
+           JOptionPane.showMessageDialog(view, "Hằng số x không hợp lệ.");
+       }
+       return isValid;
+   }
     
+   private boolean checkB() {
+       boolean isValid = false;
+       try {
+           if (!"".equals(view.getTextFieldY().getText())) {
+               y = Float.parseFloat(view.getTextFieldY().getText());
+               isValid = true;
+           } else {
+               JOptionPane.showMessageDialog(view, "Hằng số y không được trống.");
+           }
+       } catch (NumberFormatException ex) {
+           ex.printStackTrace();
+           JOptionPane.showMessageDialog(view, "Hằng số y không hợp lệ.");
+       }
+       return isValid;
+   }
+    
+   private boolean checkC() {
+       boolean isValid = false;
+       try {
+           if (!"".equals(view.getTextFieldZ().getText())) {
+               z = Float.parseFloat(view.getTextFieldZ().getText());
+               isValid = true;
+           } else {
+               JOptionPane.showMessageDialog(view, "Hằng số z không được trống.");
+           }
+       } catch (NumberFormatException ex) {
+           ex.printStackTrace();
+           JOptionPane.showMessageDialog(view, "Hằng số z không hợp lệ.");
+       }
+       return isValid;
+   }
    
  
     public ptb2View getView() {
