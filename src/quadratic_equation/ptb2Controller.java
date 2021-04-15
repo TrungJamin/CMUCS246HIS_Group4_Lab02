@@ -57,14 +57,7 @@ public class ptb2Controller implements ActionListener {
    
  
     
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (checkA() && checkB() && checkC()) {
-            view.getTextArea().setText(giaiPTB2(x, y, z));
-        } else {
-            view.getTextArea().setText("");
-        }
-    }
+   
  
     public ptb2View getView() {
         return view;
