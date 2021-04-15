@@ -23,7 +23,37 @@ public class ptb2Controller implements ActionListener {
         });
     }
  
-   
+   private static String giaiPTB2(float a, float b, float c) {
+        String ketqua = null;
+         
+        // Xet dieu kieu a, b, c
+        if (a == 0) {
+            if (b == 0) {
+                ketqua = "Phương trình vô nghiệm!";
+            } else {
+                ketqua = "Phương trình có một nghiệm: " + "x = " + (-c / b);
+            }
+        }
+       
+        // Xet dieu kien delta
+        float delta = b*b - 4*a*c;
+        float x1;
+        float x2;
+       
+        if (delta > 0) {
+            x1 = (float) ((-b + Math.sqrt(delta)) / (2*a));
+            x2 = (float) ((-b - Math.sqrt(delta)) / (2*a));
+            ketqua = "Phương trình có 2 nghiệm là: " + "x1 = " + x1 
+                    + " và x2 = " + x2;
+        } else if (delta == 0) {
+            x1 = (-b / (2 * a));
+            ketqua = "Phương trình có nghiệm kép: " + "x1 = x2 = " + x1;
+        } else {
+            ketqua = "Phương trình vô nghiệm!";
+        }
+         
+        return ketqua;
+    }
    
  
     
