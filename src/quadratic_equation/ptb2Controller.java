@@ -23,7 +23,8 @@ public class ptb2Controller implements ActionListener {
         });
     }
  
-   private static String giaiPTB2(float a, float b, float c) {
+    // Ham giai PTB2
+    private static String giaiPTB2(float a, float b, float c) {
         String ketqua = null;
          
         // Xet dieu kieu a, b, c
