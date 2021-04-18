@@ -7,5 +7,6 @@ public class ptb2 {
 	        ptb2Controller controller = new ptb2Controller(view);
 	        System.out.println("Hello World");
 	        System.out.println("Check in");
+		System.out.println("Check out");
 	    }
 }
